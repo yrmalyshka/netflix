@@ -1,16 +1,16 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-  // FAQ ACCORDION
-  var faqItems = document.querySelectorAll('.faq-item');
+  // FAQ
+  var faq = document.querySelectorAll('.faq-item');
 
-  faqItems.forEach(function (item) {
+  faq.forEach(function (item) {
     item.addEventListener('click', function () {
 
       var answer = item.nextElementSibling;
-      var isOpen = item.classList.contains('open');
+      var open = item.classList.contains('open');
 
-      // Close other FAQ items
-      faqItems.forEach(function (other) {
+      // Close other FAQ
+      faq.forEach(function (other) {
         if (other !== item) {
           other.classList.remove('open');
 
@@ -22,36 +22,36 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       });
 
-      // Toggle current FAQ
-      item.classList.toggle('open', !isOpen);
+      // Open selected FAQ
+      item.classList.toggle('open', !open);
 
       if (answer && answer.classList.contains('faq-answer')) {
-        answer.classList.toggle('open', !isOpen);
+        answer.classList.toggle('open', !open);
       }
     });
   });
 
 
-  // TRENDING NOW SCROLL
-  var scrollArrow = document.querySelector('.scroll-arrow');
-  var trendingRow = document.querySelector('.trending-row');
+  // TRENDING
+  var arrow = document.querySelector('.scroll');
+  var row = document.querySelector('.trending-row');
 
-  if (scrollArrow && trendingRow) {
+  if (arrow && row) {
 
-    scrollArrow.addEventListener('click', function () {
+    arrow.addEventListener('click', function () {
 
-      var maxScroll = trendingRow.scrollWidth - trendingRow.clientWidth;
+      var maxScroll = row.scrollWidth - row.clientWidth;
 
-      if (trendingRow.scrollLeft >= maxScroll - 10) {
+      if (row.scrollLeft >= maxScroll - 10) {
 
-        trendingRow.scrollBy({
+        row.scrollBy({
           left: -300,
           behavior: 'smooth'
         });
 
       } else {
 
-        trendingRow.scrollBy({
+        row.scrollBy({
           left: 300,
           behavior: 'smooth'
         });
@@ -59,62 +59,60 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
 
-    trendingRow.addEventListener('scroll', function () {
 
-      var maxScroll = trendingRow.scrollWidth - trendingRow.clientWidth;
+    row.addEventListener('scroll', function () {
 
-      if (trendingRow.scrollLeft >= maxScroll - 10) {
-        scrollArrow.textContent = '‹';
+      var maxScroll = row.scrollWidth - row.clientWidth;
+
+      if (row.scrollLeft >= maxScroll - 10) {
+        arrow.textContent = '‹';
       } else {
-        scrollArrow.textContent = '›';
+        arrow.textContent = '›';
       }
 
     });
 
   }
 
-  // EMAIL VALIDATION
-  var emailForms = document.querySelectorAll('.email-form');
 
-  emailForms.forEach(function (form) {
+  // EMAIL
+  var forms = document.querySelectorAll('.email-form');
 
-    var input = form.querySelector('input[type="email"]');
+  forms.forEach(function (form) {
+
+    var emailInput = form.querySelector('input[type="email"]');
     var button = form.querySelector('button');
 
-    if (!input || !button) return;
+    if (!emailInput || !button) return;
 
     button.addEventListener('click', function (event) {
 
       event.preventDefault();
 
-      var email = input.value.trim();
+      var email = emailInput.value.trim();
 
       // Empty email
       if (email === '') {
-
-        input.focus();
-        input.style.border = '1px solid var(--netflix-red)';
+        emailInput.focus();
+        emailInput.style.border = '1px solid var(--netflix-red)';
 
         alert('Please enter your email address.');
         return;
       }
 
+      // Check email format
+      var emailFormat = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-      // Invalid email format
-      var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-      if (!emailPattern.test(email)) {
-
-        input.focus();
-        input.style.border = '1px solid var(--netflix-red)';
+      if (!emailFormat.test(email)) {
+        emailInput.focus();
+        emailInput.style.border = '1px solid var(--netflix-red)';
 
         alert('Please enter a valid email address.');
         return;
       }
 
-
       // Valid email
-      input.style.border = '1px solid #8c8c8c';
+      emailInput.style.border = '1px solid #8c8c8c';
 
       alert(
         'Welcome! Your sign-in request has been received for ' + email + '.'

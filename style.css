@@ -33,7 +33,7 @@ header {
   font-weight: 700;
   letter-spacing: -1px;
 }
-.header-right {
+.header {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -73,7 +73,7 @@ header {
   font-size: 18px;
   margin-bottom: 4px;
 }
-.hero-content .prompt {
+.hero-content .sub-heading {
   font-size: 16px;
   margin: 20px 0 16px;
 }
@@ -93,7 +93,10 @@ header {
   width: 320px;
   border-radius: 3px;
 }
-.email-form input::placeholder { color: #8c8c8c; }
+.email-form input::placeholder {
+  color: #8c8c8c; 
+}
+
 .get-started-btn {
   background: var(--netflix-red);
   color: #fff;
@@ -163,7 +166,7 @@ section h2 {
 .trending-card:hover img {
     transform: scale(1.05);
 }
-.rank-num {
+.rank {
   position: absolute;
   left: 3px;
   bottom: auto;
@@ -176,7 +179,7 @@ section h2 {
   font-family: Arial, sans-serif;
 }
 
-.scroll-arrow {
+.scroll {
   position: sticky;
   right: 0;
 
@@ -197,7 +200,7 @@ section h2 {
   transition: background 0.2s ease, opacity 0.2s ease;
 }
 
-.scroll-arrow:hover {
+.scroll:hover {
   background: rgba(0, 0, 0, 0.9);
 }
 
