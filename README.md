@@ -4,19 +4,47 @@ A Netflix-inspired landing page built as a website slicing project using HTML, C
 
 ## Features
 
-* Responsive landing page
-* Hero section
-* Trending movies carousel
-* FAQ accordion
-* Email input validation
-* Interactive hover effects
-* Horizontal movie scrolling
+* Responsive layout for desktop, tablet, and mobile
+* Netflix-inspired hero section
+* Email input and validation
+* Trending movies horizontal carousel
+* Interactive carousel navigation
+* FAQ accordion with open/close interaction
+* Hover effects on movie cards and FAQ items
+* Responsive navigation and content sections
+* Mobile-friendly layout
 
 ## Tech Stack
 
-* HTML5
-* CSS3
+* HTML
+* CSS
 * JavaScript
+
+## Screenshots
+
+### Desktop
+
+![Desktop Screenshot](assetss/images/Laptop.png)
+
+### Tablet
+
+![Tablet Screenshot](assetss/images/Ipad.png)
+
+### Mobile
+
+![Mobile Screenshot](assetss/images/mobile.png)
+
+## Project Structure
+
+```text
+netflix/
+├── index.html
+├── style.css
+├── script.js
+├── assets/
+│   ├── images/
+│   └── icons/
+```
 
 ## Deployment
 
