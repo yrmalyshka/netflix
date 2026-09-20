@@ -24,15 +24,15 @@ A Netflix-inspired landing page built as a website slicing project using HTML, C
 
 ### Desktop
 
-![Desktop Screenshot](assetss/images/Laptop.png)
+![Desktop Screenshot](assetss/image/Laptop.png)
 
 ### Tablet
 
-![Tablet Screenshot](assetss/images/Ipad.png)
+![Tablet Screenshot](assetss/image/Ipad.png)
 
 ### Mobile
 
-![Mobile Screenshot](assetss/images/mobile.png)
+![Mobile Screenshot](assetss/image/mobile.png)
 
 ## Project Structure
 
